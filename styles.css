@@ -23,14 +23,17 @@ input {
 }
 
 .container {
+    padding: 15px;
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
     border: 0px;
     justify-content: center;
+    gap: 5px;
 }
 
 .cell {
+    border-radius: 15px;
     border: 1px solid black;
     display: flex;
     justify-content:center;
@@ -49,4 +52,20 @@ input {
 
 h1 {
     font-size: 50px;
+}
+
+.scoresDiv {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerInfo {
+    display: flex;
+    gap: 10px;
+}
+
+.containerContainer {
+    border: 1px solid black;
+    border-radius: 10px;
 }
