@@ -9,26 +9,41 @@
 </head>
 <body>
     <h1>Play a round of Tic-Tac-Toe</h1>
-    <h2>Enter names to begin playing!</h2>
+    <h2 class="gameInfo">Enter names to begin playing!</h2>
     <div class="mainContainer">
         <div class="inputDiv">
             <label for="player1">Player 1</label>
             <input id="player1">
         </div>
-        <div class="container">
-            <div class="cell" data-row="1" data-col="1"></div>
-            <div class="cell" data-row="1" data-col="2"></div>
-            <div class="cell" data-row="1" data-col="3"></div>
-            <div class="cell" data-row="2" data-col="1"></div>
-            <div class="cell" data-row="2" data-col="2"></div>
-            <div class="cell" data-row="2" data-col="3"></div>
-            <div class="cell" data-row="3" data-col="1"></div>
-            <div class="cell" data-row="3" data-col="2"></div>
-            <div class="cell" data-row="3" data-col="3"></div>
+        <div class="containerContainer">
+            <div class="container">
+                <div class="cell" data-row="1" data-col="1"></div>
+                <div class="cell" data-row="1" data-col="2"></div>
+                <div class="cell" data-row="1" data-col="3"></div>
+                <div class="cell" data-row="2" data-col="1"></div>
+                <div class="cell" data-row="2" data-col="2"></div>
+                <div class="cell" data-row="2" data-col="3"></div>
+                <div class="cell" data-row="3" data-col="1"></div>
+                <div class="cell" data-row="3" data-col="2"></div>
+                <div class="cell" data-row="3" data-col="3"></div>
+            </div>
         </div>
         <div class="inputDiv">
             <label for="player2">Player 2</label>
             <input id="player2">
+        </div>
+    </div>
+    <div class="scoreboard">
+        <h2 class="scoreboardHead">Score:   </h2>
+        <div class="scoresDiv">
+            <div class="player1Info playerInfo">
+                <b><p class="player1ScoreLabel"></p></b>
+                <p class="player1Score">0</p>
+            </div>
+            <div class="player2Info playerInfo">
+                <b><p class="player2ScoreLabel"></p></b>
+                <p class="player2Score">0</p>
+            </div>
         </div>
     </div>
 </body>
