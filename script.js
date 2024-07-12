@@ -63,6 +63,7 @@ const game = (() => {
                 h2.textContent = `${currentPlayerObject.playerName} won.`;
                 disableCells();
                 createRestartBtn();
+                updateScores(currentPlayerObject);
             }
 
             else if (boardIsFull()) {
@@ -85,6 +86,34 @@ const game = (() => {
         resetBtn.addEventListener("click",() => init());
         body.appendChild(resetBtn);
     };
+
+    const updateScores = (player) => {
+        const p1Score = document.querySelector(".player1Score");
+        
+        const p2Score = document.querySelector(".player2Score");
+        
+        let player1Score = 0;
+        let player2Score = 0;
+        
+        
+        if (player === player1) {
+            player1Score++;
+            p1Score.textContent = player1Score;
+        }
+        
+        else if (player === player2) {
+            player2Score++;
+            p2Score.textContent = player2Score;
+        }
+    }
+    
+    const updateLabel = () => {
+        const p1Label = document.querySelector(".player1ScoreLabel");
+        p1Label.textContent = player1.playerName +":";
+        
+        const p2Label = document.querySelector(".player2ScoreLabel");
+        p2Label.textContent = player2.playerName + ":";
+    }
     
     const init = () => {
         const h2 = document.querySelector("h2");
@@ -110,8 +139,9 @@ const game = (() => {
         if(resetBtn) {
             resetBtn.remove();
         }
+
+        updateLabel();
     };
-    
 
     return {board,currentPlayer,boardIsFull,checkWin,display,init}
 })()
@@ -137,8 +167,8 @@ const player = (playerName) => {
 let player1;
 let player2;
 
-const inputPlayer1 = document.querySelector("#player1");
-const inputPlayer2 = document.querySelector("#player2");
+let inputPlayer1 = document.querySelector("#player1");
+let inputPlayer2 = document.querySelector("#player2");
 
 inputPlayer1.addEventListener("input", (event) => {
     const player1InputName = event.target.value;
